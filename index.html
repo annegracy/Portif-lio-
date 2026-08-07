@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio profissional de Anne Ribeiro - Tecnologia da Informação">
+  <title>Anne Ribeiro | Tecnologia da Informação</title>
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --card: #ffffff;
+      --text: #20242c;
+      --muted: #687080;
+      --accent: #4f46e5;
+      --accent-dark: #3730a3;
+      --line: #e7e9ef;
+      --soft: #eef0ff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Inter, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1080px, 92%); margin: auto; }
+    header {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #f7f8fb 0%, #eef0ff 100%);
+    }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 10;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    nav .container {
+      height: 64px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo { font-weight: 800; letter-spacing: -.4px; }
+    .logo span { color: var(--accent); }
+    .navlinks { display: flex; gap: 22px; font-size: .92rem; color: var(--muted); }
+    .navlinks a:hover { color: var(--accent); }
+    .hero { padding-top: 80px; }
+    .tag {
+      display: inline-block; padding: 7px 12px; border-radius: 999px;
+      background: var(--soft); color: var(--accent-dark); font-weight: 700; font-size: .82rem;
+      margin-bottom: 18px;
+    }
+    h1 { font-size: clamp(2.5rem, 7vw, 5rem); line-height: 1; letter-spacing: -3px; max-width: 800px; }
+    .hero p { margin: 22px 0 28px; max-width: 680px; color: var(--muted); font-size: 1.08rem; }
+    .buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      padding: 12px 18px; border-radius: 10px; font-weight: 700; border: 1px solid var(--line);
+      background: white; display: inline-block;
+    }
+    .btn.primary { background: var(--accent); color: white; border-color: var(--accent); }
+    .btn:hover { transform: translateY(-1px); }
+    section { padding: 76px 0; }
+    .section-title { font-size: 2rem; margin-bottom: 10px; letter-spacing: -1px; }
+    .section-subtitle { color: var(--muted); margin-bottom: 28px; }
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .card {
+      background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+      padding: 24px; box-shadow: 0 8px 28px rgba(20,25,40,.04);
+    }
+    .card h3 { margin-bottom: 8px; }
+    .card p { color: var(--muted); }
+    .skills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .skill {
+      background: white; border: 1px solid var(--line); border-radius: 999px;
+      padding: 8px 13px; font-size: .9rem;
+    }
+    .timeline { border-left: 2px solid var(--line); padding-left: 22px; }
+    .timeline .item { margin-bottom: 28px; position: relative; }
+    .timeline .item::before {
+      content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--accent);
+      position: absolute; left: -28px; top: 8px;
+    }
+    .date { color: var(--accent); font-weight: 700; font-size: .9rem; }
+    footer { padding: 30px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+    @media (max-width: 700px) {
+      .navlinks { display: none; }
+      .grid { grid-template-columns: 1fr; }
+      h1 { letter-spacing: -2px; }
+      section { padding: 58px 0; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a class="logo" href="#inicio">Anne<span>Ribeiro</span></a>
+      <div class="navlinks">
+        <a href="#sobre">Sobre</a>
+        <a href="#formacao">Formação</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="inicio">
+    <div class="container hero">
+      <span class="tag">Em transição para Tecnologia da Informação</span>
+      <h1>Anne Ribeiro</h1>
+      <p>
+        Estudante de Análise e Desenvolvimento de Sistemas, com formação em Administração
+        e interesse em construir soluções, aprender tecnologia e crescer profissionalmente na área de TI.
+      </p>
+      <div class="buttons">
+        <a class="btn primary" href="#projetos">Ver projetos</a>
+        <a class="btn" href="#contato">Entrar em contato</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="sobre">
+      <div class="container">
+        <h2 class="section-title">Sobre mim</h2>
+        <p class="section-subtitle">Um pouco sobre minha trajetória profissional.</p>
+        <div class="card">
+          <p>
+            Sou bacharel em Administração e atualmente curso Análise e Desenvolvimento de Sistemas
+            na Uninter. Estou direcionando minha carreira para Tecnologia da Informação e busco uma
+            oportunidade que me permita aplicar minha experiência profissional, desenvolver conhecimentos
+            técnicos e evoluir junto com a equipe.
+          </p>
+          <p style="margin-top:12px">
+            Tenho interesse especialmente em áreas como suporte de TI, qualidade e testes de software,
+            análise de sistemas e outras posições de entrada relacionadas à tecnologia.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="formacao">
+      <div class="container">
+        <h2 class="section-title">Formação</h2>
+        <p class="section-subtitle">Minha base acadêmica.</p>
+        <div class="timeline">
+          <div class="item">
+            <div class="date">Em andamento</div>
+            <h3>Análise e Desenvolvimento de Sistemas</h3>
+            <p>Uninter — graduação EAD</p>
+          </div>
+          <div class="item">
+            <div class="date">Concluído</div>
+            <h3>Bacharelado em Administração</h3>
+            <p>Formação superior em Administração.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="habilidades">
+      <div class="container">
+        <h2 class="section-title">Habilidades</h2>
+        <p class="section-subtitle">Competências que estou desenvolvendo e aplicando na minha formação.</p>
+        <div class="skills">
+          <span class="skill">Lógica de programação</span>
+          <span class="skill">Análise de requisitos</span>
+          <span class="skill">Testes de software</span>
+          <span class="skill">Suporte ao usuário</span>
+          <span class="skill">Organização de processos</span>
+          <span class="skill">Resolução de problemas</span>
+          <span class="skill">Excel</span>
+          <span class="skill">Inteligência Artificial</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos">
+      <div class="container">
+        <h2 class="section-title">Projetos</h2>
+        <p class="section-subtitle">Projetos acadêmicos e pessoais serão adicionados aqui conforme minha evolução em ADS.</p>
+        <div class="grid">
+          <div class="card">
+            <h3>Projeto 01 — Em desenvolvimento</h3>
+            <p>Projeto prático relacionado aos estudos de Análise e Desenvolvimento de Sistemas.</p>
+          </div>
+          <div class="card">
+            <h3>Projeto 02 — Em desenvolvimento</h3>
+            <p>Aplicação prática dos conhecimentos adquiridos durante a graduação.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <div class="container">
+        <h2 class="section-title">Contato</h2>
+        <p class="section-subtitle">Vamos conversar sobre oportunidades em tecnologia.</p>
+        <div class="card">
+          <p><strong>LinkedIn:</strong> <a href="#" onclick="return false;">Adicione seu LinkedIn aqui</a></p>
+          <p style="margin-top:8px"><strong>GitHub:</strong> <a href="#" onclick="return false;">Adicione seu GitHub aqui</a></p>
+          <p style="margin-top:8px"><strong>E-mail:</strong> Adicione seu e-mail profissional aqui</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2026 Anne Ribeiro · Portfólio profissional</div>
+  </footer>
+</body>
+</html>
